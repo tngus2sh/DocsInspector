@@ -452,11 +452,6 @@ if choice == "문서 업로드":
 
         original_filename = uploaded_file.name
 
-        print("========= 파일 컨테이너 정보 =========")
-        print(f"Blob Connection String: {BLOB_CONN_STR}")
-        print(f"Blob Container Name: {BLOB_CONTAINER_NAME}")
-        print(f"Blob Csv Container Name: {BLOB_CSV_CONTAINER_NAME}")
-
         # Azure Blob Storage 업로드
         with st.spinner("파일 업로드 중..."):
             upload_file_to_blob(uploaded_file, original_filename)
@@ -474,8 +469,11 @@ if choice == "문서 업로드":
 
         if content:
 
+            # session state 초기화
             # 체크리스트를 session state에 보관
             st.session_state.generated_checklist = []
+            # 피드백 내용을 session state에 보관
+            st.session_state.feedback_list = []
 
             # GPT 분석 수행
             with st.spinner("문서 분석 중..."):
