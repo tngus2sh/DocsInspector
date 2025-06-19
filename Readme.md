@@ -1,4 +1,4 @@
-# 📄 분석서 인스펙터 (Document Inspector)
+# 📄 DocuLens: AI 기반 문서 분석 및 유사 문서 검색 시스템
 
 **문서를 업로드하면 AI가 자동으로 주제, 요약, 키워드, 유사 문서, 체크리스트까지 생성해주는 Streamlit 기반 문서 분석 어시스턴트입니다.**
 Azure OpenAI와 Azure AI Search를 통합하여 RAG 기반 검색 및 분석을 수행합니다.
