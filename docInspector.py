@@ -67,7 +67,7 @@ search_client = SearchClient(
 )
 
 # 페이지 설정
-st.set_page_config(page_title="분석서 인스펙터", layout="wide")
+st.set_page_config(page_title="DocuLens: AI 기반 문서 분석 및 유사 문서 검색 시스템", layout="wide")
 
 # 전체 스타일 삽입
 st.markdown(
@@ -144,6 +144,8 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 if "documents" not in st.session_state:
     st.session_state.documents = []  # 기존 문서 목록 저장용
+if "generated_checklist" not in st.session_state:
+    st.session_state.generated_checklist = []
 
 # 사이드바 메뉴
 menu = ["문서 업로드", "통합 리뷰", "문서 검색"]

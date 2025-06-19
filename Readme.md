@@ -1,7 +1,6 @@
 # 📄 분석서 인스펙터 (Document Inspector)
 
 **문서를 업로드하면 AI가 자동으로 주제, 요약, 키워드, 유사 문서, 체크리스트까지 생성해주는 Streamlit 기반 문서 분석 어시스턴트입니다.**
-
 Azure OpenAI와 Azure AI Search를 통합하여 RAG 기반 검색 및 분석을 수행합니다.
 
 ---
@@ -31,6 +30,8 @@ Azure OpenAI와 Azure AI Search를 통합하여 RAG 기반 검색 및 분석을 
 
 ## ⚙️ 환경 변수 설정 (.env)
 
+다음 값들을 `.env` 파일에 설정해야 합니다.
+
 ```env
 # Azure Blob Storage
 BLOB_CONN_STR=DefaultEndpointsProtocol=...        # Blob Storage 연결 문자열
@@ -47,6 +48,10 @@ AZURE_EMBEDDING_DEPLOYMENT_NAME=text-embedding   # 임베딩 모델 deployment �
 AZURE_SEARCH_ENDPOINT=https://your-search.search.windows.net
 AZURE_SEARCH_KEY=your-search-key
 AZURE_SEARCH_INDEX_NAME=your-index-name
+
+# 외부 폼 서비스 (선택사항)
+FORM_ENDPOINT=https://your.form.endpoint (옵션)
+FORM_KEY=secret-key (옵션)
 ```
 
 ---
@@ -103,9 +108,9 @@ streamlit run app.py
 
 ## 🛠️ 향후 개선 아이디어
 
-* 🖼️ 멀티 모달 문서 검색
-* 🏷️ 문서 메타데이터 자동 태깅
-* 🔗 API화 및 외부 시스템 연동
+* 🔐 로그인 기반 사용자별 문서 저장
+* 📊 분석 통계 대시보드
+* 📂 업로드 이력 관리 기능
 * 🧾 CSV 메타데이터 다운로드 버튼
 
 ---
