@@ -262,6 +262,8 @@ def parse_keywords(gpt_output):
     return clean_words  # 해시태그 붙이지 않음
 
 
+# 유사 문서 검색 함수
+# Azure Search AI를 사용하여 유사 문서 검색
 def find_similar_documents(messages):
 
     # 검색을 위해 쿼리 작성
