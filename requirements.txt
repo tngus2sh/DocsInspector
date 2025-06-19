@@ -1,0 +1,12 @@
+streamlit
+python-dotenv
+streamlit-chat
+matplotlib
+numpy
+scikit-learn
+PyPDF2
+python-docx
+azure-storage-blob
+openai
+azure-search-documents
+pandas
