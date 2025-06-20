@@ -30,8 +30,6 @@ Azure OpenAI와 Azure AI Search를 통합하여 RAG 기반 검색 및 분석을 
 
 ## ⚙️ 환경 변수 설정 (.env)
 
-다음 값들을 `.env` 파일에 설정해야 합니다.
-
 ```env
 # Azure Blob Storage
 BLOB_CONN_STR=DefaultEndpointsProtocol=...        # Blob Storage 연결 문자열
@@ -48,10 +46,6 @@ AZURE_EMBEDDING_DEPLOYMENT_NAME=text-embedding   # 임베딩 모델 deployment �
 AZURE_SEARCH_ENDPOINT=https://your-search.search.windows.net
 AZURE_SEARCH_KEY=your-search-key
 AZURE_SEARCH_INDEX_NAME=your-index-name
-
-# 외부 폼 서비스 (선택사항)
-FORM_ENDPOINT=https://your.form.endpoint (옵션)
-FORM_KEY=secret-key (옵션)
 ```
 
 ---
